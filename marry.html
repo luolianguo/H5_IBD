@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IBD</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/marry.css">
+
+    <!--llgstart-->
+    <link rel="stylesheet" href="css/other.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/llg/aniAuto.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <!--llgend-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*.swiper-slide {*/
+        /*text-align: center;*/
+        /*font-size: 18px;*/
+        /*background: #fff;*/
+
+        /*!* Center slide text vertically *!*/
+        /*display: -webkit-box;*/
+        /*display: -ms-flexbox;*/
+        /*display: -webkit-flex;*/
+        /*display: flex;*/
+        /*-webkit-box-pack: center;*/
+        /*-ms-flex-pack: center;*/
+        /*-webkit-justify-content: center;*/
+        /*justify-content: center;*/
+        /*-webkit-box-align: center;*/
+        /*-ms-flex-align: center;*/
+        /*-webkit-align-items: center;*/
+        /*align-items: center;*/
+        /*}*/
+
+        .swiper-slide {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100%
+        }
+
+        .swiper-slide0 {
+            width: auto;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .word, .word_2 {
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .loving, .loving_next2 {
+            bottom: -28px;
+            position: absolute;
+            left: 32px;
+            width: 150px;
+            display: none;
+        }
+
+        .loving_next2 {
+            bottom: 13px;
+            left: -101px;
+        }
+
+        .next_2 {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .sam {
+            overflow: hidden;
+            position: absolute;
+            width: 147px;
+            left: 113px;
+            top: -19px;
+            height: 0px;
+        }
+
+        .next_2, .mouse1 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1 class="loading">Loading</h1>
+<audio id="bg-audio" class="media-audio" src="music/Mark Isham - Building A Family.mp3" autoplay
+       loop="loop"></audio>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p2back background">
+                    <img id="p2anim1" ani-duration="2s" class="ani-auto" src="images/Img/page2/back.png"  alt="#"> 
+                </div>
+                <div class="layeritem p2words">
+                    <div ani-trigger="#p2anim1" ani-duration="2s" ani-delay="2s" class="imgwrapper ani-auto widthslide" id="p2anim2">
+                        <img src="images/Img/page2/words1.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="2s" ani-trigger="#p2anim2" class="imgwrapper ani-auto widthslide" id="p2anim3">
+                        <img src="images/Img/page2/words2.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="2s" ani-trigger="#p2anim3" class="imgwrapper ani-auto widthslide" id="p2anim4">
+                        <img src="images/Img/page2/words3.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="2s" ani-trigger="#p2anim4" class="imgwrapper ani-auto widthslide" id="p2anim5">
+                        <img src="images/Img/page2/words4.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2lixiang"><img id="p2anim6" ani-trigger="#p2anim5" class="ani-auto  fadeIn" src="images/Img/page2/lixiang.png" alt="#"></div>
+
+                <div class="layeritem p2char">
+                    <div class="imgwrapper">
+                        <img src="#" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2shadow"><img id="p2anim9" ani-trigger="#p2anim1" ani-delay="2s" class="ani-auto  fadeIn" src="images/Img/page2/shadow.png" alt="#"></div>
+
+                <div class="layeritem p2light">
+                    <i ani-trigger="#p2anim1" class="ani-auto light lightflash" id="p2anim7"></i> 
+                </div>
+                <div class="layeritem p2boy"><img id="p2anim8" ani-trigger="#p2anim7" ani-duration="2s" class="ani-auto  fadeIn" src="images/Img/page2/boy.png" alt="#"></div>
+                
+                <div class="layeritem p2alarm">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim11">
+                        <img src="images/Img/page2/alarm.png" ani-duration="4s" ani-trigger="#p2anim9" class="ani-auto tada infinite" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2apple">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim12">
+                        <img ani-duration="4s" ani-trigger="#p2anim9" class="ani-auto bounce infinite" src="images/Img/page2/apple.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p2dreamwrap">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim13">
+                        <img ani-duration="4s" ani-trigger="#p2anim9" class="ani-auto  bounceIn" src="images/Img/page2/dreamwrap.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2dream">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim14">
+                        <img ani-trigger="#p2anim9" ani-duration="4s" class="ani-auto shake infinite" src="images/Img/page2/dream.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2litgirl">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim15">
+                        <img ani-trigger="#p2anim9" class="ani-auto  fadeInDown" src="images/Img/page2/litgirl.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2radio">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim16">
+                        <img ani-trigger="#p2anim9" class="ani-auto  pulse" src="images/Img/page2/radio.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p2bus">
+                    <div ani-duration="4s" ani-trigger="#p2anim9" class="imgwrapper ani-auto widthslide" id="p2anim17">
+                        <img ani-trigger="#p2anim9" ani-duration="5s" class="ani-auto shake infinite" src="images/Img/page2/bus.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p2lovef">
+                    <div ani-trigger="#p2anim5" ani-duration="2s" class="imgwrapper ani-auto widthslide" id="p2anim18">
+                        <img src="images/Img/page2/lovef.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="1s" ani-trigger="#p2anim18" class="imgwrapper ani-auto widthslide" id="p2anim19">
+                        <img src="images/Img/page2/stayf.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="1.5s" ani-trigger="#p2anim19" class="imgwrapper ani-auto widthslide" id="p2anim20">
+                        <img src="images/Img/page2/lsfline.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page1">
+                    <div ani-trigger="#p2anim19" ani-duration="2s" class="ani-auto fadeIn">
+                        <img src="images/sursor.png" ani-duration="4s" ani-trigger="#p2anim19" class="ani-auto flash infinite" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="swiper-slide swiper-no-swiping">
+            <img src="images/shift.jpg" data-src="images/backg.jpg" alt="" class="swiper-slide0 lazy0 animated">
+            <div class="listOne">
+                <div class="word1 word">“今天我要嫁给你啦”</div>
+                <div style="padding-left: 20px" class="word2 word">为陪伴我<span style="font-size:35px">10年</span>他披上婚纱
+                </div>
+                <div style="padding-left: 20px" class="word3 word">而这句“无论疾病与否，我都爱你”</div>
+                <div style="padding-left: 20px" class="word4 word">是世间最动人的爱的告白</div>
+            </div>
+
+            <div class="word word5"
+                 style="font-family: listOne;z-index: 11;font-size: 20px;position: absolute;top: 160px;text-align: left;padding-left:25px">
+                叶蓓蓓 28岁 IBD患者3年
+            </div>
+
+            <div class="_people">
+                <img src="images/shift.jpg" data-src="images/p_bk_03.png" alt="" class="animated lazy0 showdow">
+                <img src="images/shift.jpg" data-src="images/pp_03.png" alt="" class="people lazy0 animated" style="display:none">
+                <img src="images/shift.jpg" data-src="images/headyarn/001-(7).png" alt="" class="animated lazy0 head headyarn"
+                     style="display:none; position: absolute;width: 147px;left: 113px;top: -19px;">
+                <div class="one sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(14).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="two sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(15).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="three sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(16).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="four sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(1).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="five sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(2).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="six sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(4).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="seven sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(6).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+                <div class="eight sam">
+                    <img src="images/shift.jpg" data-src="images/headyarn/001-(13).png" alt="" class="head lazy0"
+                         style="height:90px">
+                </div>
+
+            </div>
+            <div style="z-index: 11;font-size:18px;color: #ffffff;position: absolute;width: 150px;bottom: 50px;right:0px;transform:rotate(-10deg)">
+                <img src="images/shift.jpg" data-src="images/loving/l_001.png" alt="" class="loving lazy0 animated loving_0">
+                <img src="images/shift.jpg" data-src="images/loving/l_002.png" alt="" class="loving lazy0 animated loving_1">
+                <img src="images/shift.jpg" data-src="images/loving/l_003.png" alt="" class="loving lazy0 animated loving_2">
+                <img src="images/shift.jpg" data-src="images/loving/l_004.png" alt="" class="loving lazy0 animated loving_3">
+                <img src="images/shift.jpg" data-src="images/loving/l_005.png" alt="" class="loving lazy0 animated loving_4">
+                <img src="images/shift.jpg" data-src="images/loving/l_006.png" alt="" class="loving lazy0 animated loving_5">
+                <img src="images/shift.jpg" data-src="images/loving/l_007.png" alt="" class="loving lazy0 animated loving_6" id="sthanim">
+                <img src="images/shift.jpg" data-src="images/loving_06.png" alt="" class="lasttext lazy0"
+                     style="position: absolute;top: 8px;left: 38px;width: 0px;">
+            </div>
+            <div class="layers">
+                <div class="layeritem nextpage pageelse">
+                    <div ani-init-hide ani-duration="2s" ani-trigger="#sthanim" ani-delay="1s" class="ani-auto fadeIn">
+                        <img src="images/shift.jpg" data-src="images/sursor.png" ani-duration="4s" class="ani-auto lazy0 flash infinite" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p4back background">
+                    <img id="p4anim1" ani-duration="1s" class="ani-auto lazy" src="#" data-src="images/Img/page4/back.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim2" ani-trigger="#p4anim1" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/tower.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim3" ani-trigger="#p4anim1" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/freedom.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim4" ani-trigger="#p4anim1" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/clock.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim5" ani-trigger="#p4anim4" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/brige.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim6" ani-trigger="#p4anim4" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/battle.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim7" ani-trigger="#p4anim6" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/man.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim8" ani-trigger="#p4anim6" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/rock.png" alt="#"> 
+                </div>
+                <div class="layeritem p4buliding">
+                    <img id="p4anim12" ani-trigger="#p4anim6" ani-duration="3s" class="ani-auto lazy swing infinite" src="#" data-src="images/Img/page4/airplan.png" alt="#"> 
+                </div>
+                <div class="layeritem p4package">
+                    <img id="p4anim9" ani-trigger="#p4anim8" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/package.png" alt="#"> 
+                </div>
+                <div class="layeritem p4lover">
+                    <img id="p4anim10" ani-trigger="#p4anim9" class="ani-auto lazy fadeInUp" src="#" data-src="images/Img/page4/lover.png" alt="#"> 
+                </div>
+                <div class="layeritem p4words">
+                    <div id="p4anim11" ani-trigger="#p4anim9" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy" data-src="images/Img/page4/words1.png" alt="#">
+                    </div>
+                    <div id="p4anim12" ani-trigger="#p4anim9" ani-duration="1s" ani-delay="1.5s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy" data-src="images/Img/page4/words2.png" alt="#">
+                    </div>
+                    <div id="p4anim13" ani-trigger="#p4anim9" ani-duration="2s" ani-delay="3s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy" data-src="images/Img/page4/words3.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p4bags">
+                    <div id="p4anim14" ani-trigger="#p4anim9" ani-duration="8s" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" class="lazy" data-src="images/Img/page4/bag.png" alt="#">
+                    </div>
+                    <div id="p4anim15" ani-trigger="#p4anim9" ani-duration="8s" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" class="lazy" data-src="images/Img/page4/bag1.png" alt="#">
+                    </div>
+                    <div id="p4anim16" ani-trigger="#p4anim9" ani-duration="8s" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" class="lazy" data-src="images/Img/page4/traveltank.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p4lovef">
+                    <div id="p4anim17" ani-trigger="#p4anim13" ani-duration="2s" ani-delay="1s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy" data-src="images/Img/page4/lovef.png" alt="#">
+                    </div>
+                    <div id="p4anim18" ani-trigger="#p4anim13" ani-duration="2s" ani-delay="2s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy" data-src="images/Img/page4/stayf.png" alt="#">
+                    </div>
+                    <div id="p4anim19" ani-trigger="#p4anim13" ani-duration="2s" ani-delay="3s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy" data-src="images/Img/page4/lsfline.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page3">
+                    <div ani-trigger="#p4anim18" ani-duration="2s" class="ani-auto fadeIn">
+                        <img src="images/sursor.png" ani-duration="4s" ani-trigger="#p4anim18" class="ani-auto flash infinite" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p5back background">
+                    <img id="p5anim1" ani-duration="1s" class="ani-auto lazy1" src="#" data-src="images/Img/page5/back.png" alt="#"> 
+                </div>
+                <div class="layeritem p5people">
+                    <img id="p5anim2" ani-trigger="#p5anim1" ani-duration="2s" ani-delay="1s" class="ani-auto lazy1 fadeInUp" src="#" data-src="images/Img/page5/people.png" alt="#"> 
+                </div>
+                <div class="layeritem p5words">
+                    <div id="p5anim3" ani-trigger="#p5anim1" ani-duration="1.5s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/words1.png" alt="#">
+                    </div>
+                    <div id="p5anim4" ani-trigger="#p5anim3" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/words2.png" alt="#">
+                    </div>
+                    <div id="p5anim5" ani-trigger="#p5anim4" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/words3.png" alt="#">
+                    </div>
+                    <div id="p5anim6" ani-trigger="#p5anim5" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/words4.png" alt="#">
+                    </div>
+                    <div id="p5anim7" ani-trigger="#p5anim6" ani-duration="1.5s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/words5.png" alt="#">
+                    </div>
+                    <div id="p5anim8" ani-trigger="#p5anim7" ani-duration="2s" ani-delay="1s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/words6.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p5lines">
+                    <div id="p5anim9" ani-trigger="#p5anim5" ani-duration="5s" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" data-src="images/Img/page5/crown.png" ani-trigger="#p5anim7" ani-duration="4s" class="ani-auto lazy1 flash infinite" alt="#">
+                    </div>
+                    <div id="p5anim10" ani-trigger="#p5anim5" ani-duration="5s" ani-delay="1s" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" class="lazy1" data-src="images/Img/page5/dress.png" alt="#">
+                    </div>
+                    <div id="p5anim11" ani-trigger="#p5anim5" ani-duration="5s" ani-delay="2s" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" data-src="images/Img/page5/bear.png" ani-trigger="#p5anim7" ani-duration="3s" class="ani-auto lazy1 littada infinite" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p5lovef">
+                    <div id="p5anim17" ani-trigger="#p5anim10" ani-duration="1.5s" ani-delay="1s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy1" data-src="images/Img/page5/lovef.png" alt="#">
+                    </div>
+                    <div id="p5anim18" ani-trigger="#p5anim10" ani-duration="1.5s" ani-delay="2s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy1" data-src="images/Img/page5/stayf.png" alt="#">
+                    </div>
+                    <div id="p5anim19" ani-trigger="#p5anim10" ani-duration="1.5s" ani-delay="3s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy1" data-src="images/Img/page5/lsfline.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page4">
+                    <div ani-trigger="#p5anim10" ani-duration="2s" class="ani-auto fadeIn">
+                        <img src="images/sursor.png" ani-duration="4s" ani-trigger="#p5anim10" class="ani-auto flash infinite" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p6back background">
+                    <img id="p6anim1" ani-duration="1s" class="ani-auto lazy2" src="#" data-src="images/Img/page6/back.png" alt="#"> 
+                </div>
+                <div class="layeritem p6people">
+                    <img id="p6anim2" ani-trigger="#p6anim4" ani-duration="2s" ani-delay="1s" class="ani-auto lazy2 fadeInUp" src="#" data-src="images/Img/page6/people.png" alt="#"> 
+                </div>
+                <div class="layeritem p6words">
+                    <div id="p6anim3" ani-trigger="#p6anim1" ani-duration="1.5s" ani-delay="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/words1.png" alt="#">
+                    </div>
+                    <div id="p6anim4" ani-trigger="#p6anim3" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/words2.png" alt="#">
+                    </div>
+                    <div id="p6anim5" ani-trigger="#p6anim4" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/words3.png" alt="#">
+                    </div>
+                    <div id="p6anim6" ani-trigger="#p6anim5" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/words4.png" alt="#">
+                    </div>
+                    <div id="p6anim7" ani-trigger="#p6anim6" ani-duration="1.5s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/words5.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p6litgirl">
+                    <div id="p6anim8" ani-trigger="#p6anim5" ani-duration="1.5s" ani-delay="1s" class="imgwrapper ani-auto fadeInUp" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/litgirl.png" alt="#">
+                    </div>
+                    <div id="p6anim9" ani-trigger="#p6anim8" ani-duration="" class="imgwrapper ani-auto heightslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/labawrap.png" alt="#">
+                    </div>
+                    <div id="p6anim10" ani-trigger="#p6anim9" ani-duration="" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy2" data-src="images/Img/page6/labawind.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p6lines">
+                    <img id="p6anim11" ani-trigger="#p6anim10" ani-duration="3s" class="ani-auto flash lazy2 infinite" src="#" data-src="images/Img/page6/kmdlines.png" alt="#">
+                </div>
+                <div class="layeritem p6lovef">
+                    <div id="p6anim12" ani-trigger="#p6anim8" ani-duration="1.5s" ani-delay="1s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy2" data-src="images/Img/page6/lovef.png" alt="#">
+                    </div>
+                    <div id="p6anim13" ani-trigger="#p6anim8" ani-duration="1.5s" ani-delay="2s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy2" data-src="images/Img/page6/stayf.png" alt="#">
+                    </div>
+                    <div id="p6anim14" ani-trigger="#p6anim8" ani-duration="1.5s" ani-delay="3s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy2" data-src="images/Img/page6/lsfline.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page5">
+                    <div ani-trigger="#p6anim13" ani-duration="2s" class="ani-auto fadeIn">
+                        <img src="images/sursor.png" ani-duration="4s" ani-trigger="#p6anim13" class="ani-auto flash infinite" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p7back background">
+                    <img id="p7anim1" ani-duration="1s" class="ani-auto lazy3" src="#" data-src="images/Img/page7/back.png" alt="#"> 
+                </div>
+                <div class="layeritem p7people">
+                    <img id="p7anim2" ani-trigger="#p7anim1" ani-duration="2s" ani-delay=".5s" class="ani-auto fadeInUp lazy3" src="#" data-src="images/Img/page7/people.png" alt="#"> 
+                </div>
+                <div class="layeritem p7words">
+                    <div id="p7anim3" ani-trigger="#p7anim1" ani-duration="1.5s" ani-delay=".5s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy3" data-src="images/Img/page7/words1.png" alt="#">
+                    </div>
+                    <div id="p7anim4" ani-trigger="#p7anim3" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy3" data-src="images/Img/page7/words2.png" alt="#">
+                    </div>
+                    <div id="p7anim5" ani-trigger="#p7anim4" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy3" data-src="images/Img/page7/words3.png" alt="#">
+                    </div>
+                    <div id="p7anim6" ani-trigger="#p7anim5" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy3" data-src="images/Img/page7/words4.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p7ball">
+                    <div id="p7anim7" ani-trigger="#p7anim3" ani-duration="3s" class="imgwrapper ani-auto fadeIn" >
+                        <img ani-trigger="#p7anim3" ani-duration="3s" ani-delay="1s" class="ani-auto lazy3 littleswing infinite" src="#" data-src="images/Img/page7/ball1.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p7ball">
+                    <div id="p7anim8" ani-trigger="#p7anim4" ani-duration="3s" class="imgwrapper ani-auto fadeIn" >
+                        <img ani-trigger="#p7anim4" ani-duration="3s" ani-delay="1s" class="ani-auto lazy3 littleswing infinite" src="#" data-src="images/Img/page7/ball2.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p7ball">
+                    <div id="p7anim9" ani-trigger="#p7anim5" ani-duration="3s" class="imgwrapper ani-auto fadeIn" >
+                        <img ani-trigger="#p7anim5" ani-duration="3s" ani-delay="1s" class="ani-auto lazy3 littleswing infinite" src="#" data-src="images/Img/page7/ball3.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p7ball">
+                    <div id="p7anim10" ani-trigger="#p7anim5" ani-duration="3s" ani-delay="2s" class="imgwrapper ani-auto fadeIn" >
+                        <img ani-trigger="#p7anim5" ani-duration="3s" ani-delay="1s" class="ani-auto lazy3 littleswing infinite" src="#" data-src="images/Img/page7/ball4.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p7lovef">
+                    <div id="p7anim11" ani-trigger="#p7anim6" ani-duration="1.5s" ani-delay="1s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy3" data-src="images/Img/page7/lovef.png" alt="#">
+                    </div>
+                    <div id="p7anim12" ani-trigger="#p7anim6" ani-duration="1.5s" ani-delay="2s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy3" data-src="images/Img/page7/stayf.png" alt="#">
+                    </div>
+                    <div id="p7anim13" ani-trigger="#p7anim6" ani-duration="1.5s" ani-delay="3s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy3" data-src="images/Img/page7/lsfline.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page6">
+                    <div ani-trigger="#p7anim12" ani-duration="2s" class="ani-auto fadeIn">
+                        <img src="images/sursor.png" ani-duration="4s" ani-trigger="#p7anim12" class="ani-auto flash infinite" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p8back background">
+                    <img id="p8anim1" ani-duration="1.5s" class="ani-auto lazy4" src="#" data-src="images/Img/page8/back.png" alt="#"> 
+                </div>
+                <div class="layeritem p8hand">
+                    <img id="p8anim2" ani-trigger="#p8anim1" ani-duration="2s" ani-delay=".5s" class="ani-auto lazy4 fadeInUp" src="#" data-src="images/Img/page8/hand.png" alt="#"> 
+                </div>
+                <div class="layeritem p8words">
+                    <div id="p8anim3" ani-trigger="#p8anim1" ani-duration="1.5s" ani-delay=".5s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy4" data-src="images/Img/page8/words1.png" alt="#">
+                    </div>
+                    <div id="p8anim4" ani-trigger="#p8anim3" ani-duration="2s" class="imgwrapper ani-auto widthslide" >
+                        <img src="#" class="lazy4" data-src="images/Img/page8/words2.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p8handhert">
+                    <div id="p8anim5" ani-trigger="#p8anim1" ani-duration="3s" ani-delay="1s" class="imgwrapper ani-auto heightslide">
+                        <img src="#" class="lazy4" data-src="images/Img/page8/handhert.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p8hert full">
+                    <div id="p8anim6" ani-trigger="#p8anim5" ani-duration="3s" class="imgwrapper ani-auto fadeIn">
+                        <img src="#" class="lazy4" data-src="images/Img/page8/hert1.png" alt="#">
+                    </div>
+                    <div id="p8anim7" ani-trigger="#p8anim5" ani-duration="3s" class="imgwrapper ani-auto fadeIn">
+                        <img src="#" class="lazy4" data-src="images/Img/page8/hert2.png" alt="#">
+                    </div>
+                </div>
+
+                <div class="layeritem p8cloud">
+                    <img id="p8anim8" ani-trigger="#p8anim5" ani-duration="2s" class="ani-auto lazy4 fadeIn" src="#" data-src="images/Img/page8/cloud0.png" alt="#">
+                </div>
+
+                <div class="layeritem p8lovef">
+                    <div id="p8anim12" ani-trigger="#p8anim8" ani-duration="1.5s" ani-delay="1s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy4" data-src="images/Img/page8/lovef.png" alt="#">
+                    </div>
+                    <div id="p8anim13" ani-trigger="#p8anim8" ani-duration="1.5s" ani-delay="2s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy4" data-src="images/Img/page8/stayf.png" alt="#">
+                    </div>
+                    <div id="p8anim14" ani-trigger="#p8anim8" ani-duration="1.5s" ani-delay="3s" class="imgwrapper ani-auto widthslide">
+                        <img src="#" class="lazy4" data-src="images/Img/page8/lsfline.png" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page7">
+                    <div ani-trigger="#p8anim13" ani-duration="2s" class="ani-auto fadeIn">
+                        <img src="images/sursor.png" ani-duration="4s" ani-trigger="#p8anim13" class="ani-auto flash infinite" alt=""> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!--<div class="swiper-pagination"></div>-->
+          <!-- <div class="swiper-slide swiper-no-swiping">
+            <div class="layers">
+                <div class="layeritem p0back background">
+                    <img ani-duration="1s" id="p0anim0" class="ani-auto " src="images/backg.jpg" alt="#"> 
+                </div>
+                <div class="layeritem p0words">
+                    <div ani-trigger="#p0anim9" ani-duration="2s" class="imgwrapper ani-auto widthslide" id="p0anim1">
+                        <img src="images/ypp.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p0peopleline">
+                    <div ani-duration="3s" ani-trigger="#p0anim0" class="imgwrapper ani-auto heightslide" id="p0anim2">
+                        <img src="images/peopleline.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p0peop1">
+                    <div ani-trigger="#p0anim2" ani-duration="2s" class="imgwrapper ani-auto fadeIn" id="p0anim3">
+                        <img src="images/people1.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p0shadow">
+                    <div ani-trigger="#p0anim2" ani-duration="2s" class="imgwrapper ani-auto fadeInUp" id="p0anim33">
+                        <img src="images/Img/page3/shadow.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem potousha">
+                    <div ani-trigger="#p0anim3" ani-duration="1.5s" class="imgwrapper ani-auto fadeInUp" id="p0anim4">
+                        <img src="images/tousha.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p0yarn">
+                    <div ani-trigger="#p0anim4" ani-duration="5s" class="imgwrapper ani-auto fadeInDown Twinkle" id="p0anim5">
+                        <img src="images/yarn.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p0words1">
+                    <div ani-trigger="#p0anim2" ani-duration="2s" class="imgwrapper ani-auto widthslide" id="p0anim6">
+                        <img src="images/Img/page3/words1.png" class="" alt="#">
+                    </div>
+                    <div ani-trigger="#p0anim6" ani-duration="2s" class="imgwrapper ani-auto widthslide" id="p0anim7">
+                        <img src="images/Img/page3/words2.png" class="" alt="#">
+                    </div>
+                    <div ani-trigger="#p0anim7" ani-duration="2s" class="imgwrapper ani-auto widthslide" id="p0anim8">
+                        <img src="images/Img/page3/words3.png" class="" alt="#">
+                    </div>
+                    <div ani-trigger="#p0anim8" ani-duration="2s" class="imgwrapper ani-auto widthslide" id="p0anim9">
+                        <img src="images/Img/page3/words4.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem p0lovef">
+                    <div ani-trigger="#p0anim1" ani-duration="1s" class="imgwrapper ani-auto widthslide" id="p0anim10">
+                        <img src="images/Img/page2/lovef.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="1s" ani-trigger="#p0anim10" class="imgwrapper ani-auto widthslide" id="p0anim11">
+                        <img src="images/Img/page2/stayf.png" class="" alt="#">
+                    </div>
+                    <div ani-duration="1s" ani-trigger="#p0anim11" class="imgwrapper ani-auto widthslide" id="p0anim12">
+                        <img src="images/Img/page2/lsfline.png" class="" alt="#">
+                    </div>
+                </div>
+                <div class="layeritem nextpage page2">
+                    <img src="images/sursor.png" ani-duration="2s" ani-trigger="#p0anim11" class="ani-auto flash infinite" alt="">
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<script src="js/loading.js"></script>
+<script src="js/marry.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<script>
+    $(".loading").lettering();
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        pagination: {
+            el: '.swiper-pagination',
+            type: "custom",
+            clickable: true,
+            noSwiping: true
+        },
+        on: {
+            slideChangeTransitionStart: function () {//
+                if (this.activeIndex === 1) {
+                    next_2()
+                }
+            }
+        }
+    })
+   
+    var bgAudio = document.getElementById('bg-audio');
+    bgAudio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        bgAudio.play();
+    }, false);
+    // 其他应用在click/touch时触发播放
+    var index=1;
+    $(".swiper-container .swiper-wrapper .swiper-slide .layers .nextpage img").each(function(){
+        slidpage($(this));
+    })
+    function slidpage(item)
+    {
+        var $this=item;
+        var flag = false;
+        $this.bind('touchstart click', function(){
+          if (!flag) 
+          {
+            flag = true;
+            setTimeout(function(){ flag = false; }, 100);
+            bgAudio.play();
+            swiper.slideNext();
+            if(index==1)
+            {
+                startAnimation();
+                $("img.lazy").each(function(){
+                    $(this).attr("src",$(this).data("src"));
+                })
+            }
+            if(index==2)
+            {
+                $("img.lazy1").each(function(){
+                    $(this).attr("src",$(this).data("src"));
+                })
+            }
+            if(index==3)
+            {
+                $("img.lazy2").each(function(){
+                    $(this).attr("src",$(this).data("src"));
+                })
+            }
+            if(index==4)
+            {
+                $("img.lazy3").each(function(){
+                    $(this).attr("src",$(this).data("src"));
+                })
+            }
+            if(index==5)
+            {
+                $("img.lazy4").each(function(){
+                    $(this).attr("src",$(this).data("src"));
+                })
+            }
+            if(index==7)
+            {
+                window.location.href="./finalpage.html";
+            }else{
+                if(index<7)
+                {
+                    $(".swiper-wrapper .swiper-slide:eq("+index+") .layers .background img").addClass("fadeIn");
+                    index++;
+                }
+            }   
+          }
+          return false
+        });
+    }
+    window.onload=function(){
+        $('.loading').remove();
+        $(".swiper-wrapper .swiper-slide:eq(0) .layers .background img").addClass("fadeIn");
+        setTimeout(function(){
+            $(".layers .p2char .imgwrapper img").css("visibility","visible");
+            $(".layers .p2char .imgwrapper img").attr("src","images/Img/page2/char.gif");
+        },4500)
+        $("img.lazy0").each(function(){
+            $(this).attr("src",$(this).data("src"));
+        })
+    }
+
+    $(document).ready(function () {
+        $.aniAuto();
+        var twidth=$(window).width();
+        $(".layers .layeritem .imgwrapper img").css({
+            width:twidth+"px"
+        });
+        var theight=twidth/0.736;
+        $(".layers .layeritem .imgwrapper").css({
+            height:theight+"px"
+        });
+        $(".layers .layeritem .imgwrapper").parent().css({
+            height:theight+"px"
+        })
+        $(".layers .layeritem.full .imgwrapper").parent().css({
+            height:"100%"
+        })
+        $(".layers .layeritem.full .imgwrapper").css("height","100%");
+        // $(".layers .layeritem.p7ball img").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
+        //     $(this).removeClass("fadeIn").addClass("littleswing infinite");
+        // })
+
+        
+    });
+</script>
+
+</body>
+</html>

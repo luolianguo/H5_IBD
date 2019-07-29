@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IBD</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE, chrome=1">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/marry.css">
+
+    <!--llgstart-->
+    <link rel="stylesheet" href="css/other.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/llg/aniAuto.min.js"></script>
+    <style>
+.img { display:block; position: relative; width:800px; height:450px; margin:0 auto;}
+
+.img:before { content: ""; position: absolute; width:200px; height: 100%; top: 0; left: -150px; overflow: hidden;
+
+background: -moz-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,.2)), color-stop(100%, rgba(255,255,255,0)));
+
+background: -webkit-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+
+background: -o-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+
+-webkit-transform: skewX(-25deg);
+
+-moz-transform: skewX(-25deg)
+
+}
+.img:hover:before { left: 150%; transition: left 1s ease 0s; }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="img"><img src="images/Img/page2/back.png" width="800"></a>
+
+</body>
+</html>
+
+
+<div class="layers">
+    <div class="layeritem storyback">
+        <img id="anim1" ani-duration="1.5s" class="ani-auto fadeIn" src="images/Img/end1/back.png" alt="#"> 
+    </div>
+
+    <div class="layeritem hert">
+        <div id="anim2" ani-trigger="#anim1" class="imgwrapper ani-auto fadeIn">
+            <img src="images/Img/end1/hert1.png" ani-trigger="#anim2" class="ani-auto hertbeat infinite" alt="#">
+        </div>
+        <div id="anim3" ani-trigger="#anim3" class="imgwrapper ani-auto fadeIn">
+            <img src="images/Img/end1/hert2.png" ani-trigger="#anim3" class="ani-auto hertbeat infinite" alt="#">
+        </div>
+    </div>
+    <div class="layeritem input">
+        <div class="wrap">
+            <div class="title">
+                <input type="text">
+            </div>
+            <div class="content">
+                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            </div>
+            <div class="submit"></div>
+        </div>
+    </div>
+</div>
